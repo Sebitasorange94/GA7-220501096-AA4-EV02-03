@@ -1,1 +1,224 @@
-body { margin:0; padding:0; font-family: Arial; }
+/* Estilos globales del proyecto frontend de IPS Ausentismos */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+/* Layout general */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background-color: #f9fafb;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Tablas */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.table th {
+  background-color: #e5e7eb;
+}
+
+/* Botones */
+
+.button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.button.secondary {
+  background-color: #6b7280;
+}
+
+.button.danger {
+  background-color: #dc2626;
+}
+
+.button + .button {
+  margin-left: 0.4rem;
+}
+
+/* Formularios */
+
+.form-field {
+  margin-bottom: 0.8rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+/* Barra de filtros */
+
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.filter-bar input {
+  flex: 1;
+}
+
+/* Header */
+
+.header {
+  height: 56px;
+  background-color: #111827;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 220px;
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 1rem 0.5rem;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.4rem 0.7rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background-color: #374151;
+}
+
+/* Login */
+
+.login-container {
+  max-width: 360px;
+  margin: 5rem auto;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Toast (mensajes) */
+
+.toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: #059669;
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.toast.error {
+  background-color: #dc2626;
+}
+
+/* Spinner de carga */
+
+.spinner-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modales (ConfirmDialog) */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 360px;
+  width: 100%;
+}
